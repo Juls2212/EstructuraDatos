@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab Queue Simulation</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    input, select, button { margin: 5px 0; padding: 6px; width: 100%; }
+    .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; }
+    pre { background: #f4f4f4; padding: 10px; height: 200px; overflow: auto; }
+  </style>
+</head>
+<body>
+
+<h1>Clinical Laboratory - Queue Simulation</h1>
+
+<div class="box">
+  <h2>Create Sample</h2>
+  <input id="sampleId" placeholder="Sample ID (S-001)">
+  <input id="patientId" placeholder="Patient ID (P-100)">
+  <input id="sampleType" placeholder="Sample Type (blood)">
+  
+  <select id="priority">
+    <option value="NORMAL">NORMAL</option>
+    <option value="STAT">STAT</option>
+  </select>
+
+  <select id="testType">
+    <option value="HEMATOLOGY">HEMATOLOGY</option>
+    <option value="PCR">PCR</option>
+    <option value="CHEMISTRY">CHEMISTRY</option>
+  </select>
+
+  <button id="btnReceive">Receive Sample</button>
+  <button id="btnDistribute">Distribute to Machines</button>
+  <button id="btnStep">Process One Step</button>
+  <button id="btnRunAll">Process All</button>
+</div>
+
+<div class="box">
+  <h2>Logs</h2>
+  <pre id="log"></pre>
+</div>
+
+<div class="box">
+  <h2>Trace Sample</h2>
+  <input id="traceId" placeholder="Enter Sample ID">
+  <button id="btnTrace">View Trace</button>
+  <pre id="trace"></pre>
+</div>
+
+<script src="./dist/app.js"></script>
+
+</body>
+</html>
