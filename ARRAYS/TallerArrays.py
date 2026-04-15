@@ -43,7 +43,7 @@ class ArrayWorkshop:
         print(f"\nDeleted element at (row 3, col 3). Removed value: {removed}")
         self.print_2d()
 
-    #4 Search
+
     def find_in_1d(self, value="Estructura de datos"):
         if value in self.one_d:
             idx = self.one_d.index(value)
